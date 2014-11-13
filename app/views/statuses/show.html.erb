@@ -1,0 +1,12 @@
+<% notice %>
+
+<br>
+
+<%= @status.status %>
+<%= @status.user %>
+<%= @status.number_of_likes %>
+
+<%= link_to "Index", statuses_path %>
+<%= link_to "Edit", edit_status_path(@status) %>
+<%= link_to "Delete", status_path(@status), method: :delete,
+  data: { confirm: "Are you sure?"} %>

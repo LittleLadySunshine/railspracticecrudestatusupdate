@@ -1,0 +1,22 @@
+<%= link_to "Create Status", new_status_path %>
+
+<table>
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>User</th>
+        <th>Number of Likes</th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% @statuses.each do |status| %>
+    <tr>
+      <td><%= status.status %></td>
+      <td><%= status.user %></td>
+      <td><%= status.number_of_likes %></td>
+<% end %>
+    </tr>
+
+  </tbody>
+</table>
