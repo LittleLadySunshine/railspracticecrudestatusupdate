@@ -16,4 +16,11 @@ require "rails_helper"
     expect(page). to have_content("name")
     expect(page). to have_content("1")
   end
+
+  scenario "User forgets to input in fields" do
+    visit statuses_path
+    click_on "Create Status"
+    click_on "Create Status"
+    
+
 end

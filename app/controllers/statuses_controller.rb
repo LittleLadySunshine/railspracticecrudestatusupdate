@@ -9,6 +9,8 @@ class StatusesController < ApplicationController
     if @status.save
       redirect_to @status, notice: "Status was successfully created."
     else
+      sign_up_error = "Status cannot be blank/User name connot be blank/
+        number of likes cannot be blank"
       render :new
     end
   end
