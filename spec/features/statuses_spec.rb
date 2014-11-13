@@ -21,6 +21,8 @@ require "rails_helper"
     visit statuses_path
     click_on "Create Status"
     click_on "Create Status"
-    
+    expect(page). to have_content("Status can't be blank")
+    expect(page). to have_content("User can't be blank")
+  end
 
 end
